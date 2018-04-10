@@ -15,18 +15,14 @@ def update_screen(background,hero):
 def check_keydown_events(event,hero):
     if event.key == pygame.K_RIGHT:
         hero.moving_right = True
+        hero.image = pygame.image.load("images/Hero.png")
+        hero.image = pygame.transform.scale(hero.image, (130, 117))
     if event.key == pygame.K_LEFT:
         hero.moving_left = True
-    if event.key == pygame.K_UP:
-        hero.moving_up = True
-    if event.key == pygame.K_DOWN:
-        hero.moving_down = True
+        hero.image = pygame.image.load("images/Hero_flip.png")
+        hero.image = pygame.transform.scale(hero.image, (130, 117))
 def chek_keyup_events(event,hero):
     if event.key == pygame.K_RIGHT:
         hero.moving_right = False
     if event.key == pygame.K_LEFT:
         hero.moving_left = False
-    if event.key == pygame.K_UP:
-        hero.moving_up = False
-    if event.key == pygame.K_DOWN:
-        hero.moving_down = False
