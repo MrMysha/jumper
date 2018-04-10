@@ -20,10 +20,10 @@ class Hero(object):
             self.rect.centerx += 1
         if self.moving_left and self.rect.left > self.screen_rect.left:
             self.rect.centerx -= 1
-        if self.moving_up:
-            self.rect.centery -= 1
-        if self.moving_down:
-            self.rect.centery += 1
+        # if self.moving_up:
+        #     self.rect.centery -= 1
+        # if self.moving_down:
+        #     self.rect.centery += 1
 
     def blitme(self):
         self.screen.blit(self.image, self.rect)
