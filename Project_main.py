@@ -1,5 +1,4 @@
 import pygame
-import sys
 from Project_settings import Settings
 from Project_hero import Hero
 from Project_background import Background
