@@ -1,4 +1,5 @@
 import pygame
+import time
 from Project_settings import Settings
 from Project_hero import Hero
 from Project_background import Background
@@ -18,6 +19,7 @@ def init_game():
         Project_game_function.check_events(hero)
         hero.update()
         Project_game_function.update_screen(background, hero)
+        time.sleep(0.0005)
 
 
 init_game()
