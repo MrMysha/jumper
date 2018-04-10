@@ -4,6 +4,7 @@ from Project_settings import Settings
 from Project_hero import Hero
 from Project_background import Background
 import Project_game_function
+from Project_falling_object import FallObject
 
 
 def init_game():
@@ -13,12 +14,13 @@ def init_game():
     pygame.display.set_caption("Project")
     hero = Hero(screen)
     background = Background(screen)
+    obj = FallObject(screen)
 
     while True:
 
         Project_game_function.check_events(hero)
         hero.update()
-        Project_game_function.update_screen(background, hero)
+        Project_game_function.update_screen(background, hero, object)
         time.sleep(0.0005)
 
 

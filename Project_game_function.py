@@ -12,10 +12,10 @@ def check_events(hero):
             check_keyup_events(event, hero)
 
 
-def update_screen(background, hero):
-    #  background.update()#
+def update_screen(background, hero, obj):
     background.update()
     hero.blitme()
+    obj.blitme()
     pygame.display.flip()
 
 
@@ -24,10 +24,6 @@ def check_keydown_events(event, hero):
         hero.moving_right = True
     if event.key == pygame.K_LEFT:
         hero.moving_left = True
-    # if event.key == pygame.K_UP:
-    #     hero.moving_up = True
-    # if event.key == pygame.K_DOWN:
-    #     hero.moving_down = True
 
 
 def check_keyup_events(event, hero):
@@ -35,7 +31,3 @@ def check_keyup_events(event, hero):
         hero.moving_right = False
     if event.key == pygame.K_LEFT:
         hero.moving_left = False
-    # if event.key == pygame.K_UP:
-    #     hero.moving_up = False
-    # if event.key == pygame.K_DOWN:
-    #     hero.moving_down = False
